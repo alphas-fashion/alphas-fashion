@@ -1,0 +1,141 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+}
+
+
+h1, h3, h4 {
+    font-family: 'Kanit', sans-serif;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30px; 
+    font-family: 'Playfair Display', serif;
+}
+
+.logo   {
+    width: 240px;
+    height: 55px;
+    margin: 15px;
+}
+
+.logo:hover {
+    filter: brightness(.65);
+}
+
+.navigation {
+    margin: 20px;
+    font-size: 22px;
+    color: black;
+    text-decoration: none ;
+}
+
+.navbar {
+    font-family: 'Playfair Display', serif;
+}
+
+.review_b { 
+    align-items: flex-end;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    margin-left: 180px;
+    width: 160px;
+    box-shadow: 0px 4px 6px 0 rgba(34, 60, 80, 0.16);
+    border-radius: 12px;
+    border: none;
+}
+
+.review_b:hover {
+    box-shadow: 0px 12px 16px 0 rgba(34, 60, 80, 0.16);
+    transition: all ease-in-out .2s;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) );
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container > div {
+    margin: 20px;
+}
+
+.products-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+  
+.products-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+  
+.product-image-wrapper {
+    justify-self: center;
+    padding: 4%;
+    position: relative;
+}
+
+.product-image {
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px 0 rgba(34, 60, 80, 0.16);
+    transition: all ease-in-out .2s;
+}
+
+.product-image:hover {
+    filter: brightness(.65);
+    box-shadow: 0px 8px 12px 0 rgba(34, 60, 80, 0.16);
+}
+
+.product-image-wrapper:hover >h4 {
+    visibility: visible;
+}
+
+.product-image-wrapper >h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    visibility: hidden;
+    z-index: 2;
+    transition: all ease-in-out .2s;
+}
+
+@media (max-width: 1200px) {
+    .products-grid {
+      grid-template-columns: 33% 33% 33%;
+    }
+}
+
+@media (max-width: 950px) {
+    .products-grid {
+      grid-template-columns: 50% 50%;
+    }
+}
+
+@media (max-width: 650px) {
+    .products-grid {
+      grid-template-columns: 100%;
+    }
+}
